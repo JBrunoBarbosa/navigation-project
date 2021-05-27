@@ -21,6 +21,9 @@
         <action
             android:id="@+id/navigate_to_middle_two"
             app:destination="@id/middleTwoFragment" />
+        <action
+            android:id="@+id/navigate_to_main"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/bottomFourFragment"
@@ -39,6 +42,9 @@
         <action
             android:id="@+id/navigate_to_main"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/navigate_to_middle_one"
+            app:destination="@id/middleOneFragment" />
     </fragment>
     <fragment
         android:id="@+id/bottomOneFragment"
