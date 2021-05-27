@@ -5,13 +5,35 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import bruno_brabosa.convidados.navigation_project.databinding.FragmentMiddleOneBinding
+import bruno_brabosa.convidados.navigation_project.databinding.FragmentTopBinding
 
 class MiddleOneFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_middle_one, container, false)
+    private lateinit var binding: FragmentMiddleOneBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View {
+        setUpViewBinding()
+        setUpClicksListeners()
+
+        return binding.root
     }
 
+    private fun setUpViewBinding() {
+        binding = FragmentMiddleOneBinding.inflate(layoutInflater)
+    }
+
+    private fun setUpClicksListeners() {
+        binding.apply {
+
+            btnNext.setOnClickListener {
+                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_middle_two) }
+            }
+
+            btnBack.setOnClickListener {
+                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_main) }
+            }
+        }
+    }
 }
