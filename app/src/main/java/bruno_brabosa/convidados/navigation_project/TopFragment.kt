@@ -28,11 +28,11 @@ class TopFragment : Fragment() {
         binding.apply {
 
             btnNext.setOnClickListener {
-                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_top_fragment) }
+                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_main) }
             }
 
             btnBack.setOnClickListener {
-                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_middle_one) }
+                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_main) }
             }
         }
     }
