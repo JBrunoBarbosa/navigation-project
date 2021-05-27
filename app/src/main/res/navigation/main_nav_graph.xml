@@ -3,74 +3,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/optionsFragment">
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/optionsFragment">
-        <fragment
-            android:id="@+id/optionsFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.OptionsFragment"
-            android:label="fragment_options"
-            tools:layout="@layout/fragment_options" >
-            <action
-                android:id="@+id/action_optionsFragment_to_listTransactionsFragment"
-                app:destination="@id/listTransactionsFragment" />
-            <action
-                android:id="@+id/action_optionsFragment_to_addTransactionNameFragment"
-                app:destination="@id/addTransactionNameFragment" />
-            <action
-                android:id="@+id/action_optionsFragment_to_spendFragment"
-                app:destination="@id/spendFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/listTransactionsFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.ListTransactionsFragment"
-            android:label="fragment_list_transactions"
-            tools:layout="@layout/fragment_list_transactions" >
-            <action
-                android:id="@+id/action_listTransactionsFragment_to_itemTransactionFragment"
-                app:destination="@id/itemTransactionFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/itemTransactionFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.ItemTransactionFragment"
-            android:label="fragment_item_transaction"
-            tools:layout="@layout/fragment_item_transaction" />
-        <fragment
-            android:id="@+id/addTransactionNameFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.AddTransactionNameFragment"
-            android:label="fragment_add_transaction_name"
-            tools:layout="@layout/fragment_add_transaction_name" >
-            <action
-                android:id="@+id/action_addTransactionNameFragment_to_addTransactionPixFragment"
-                app:destination="@id/addTransactionPixFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/addTransactionPixFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.AddTransactionPixFragment"
-            android:label="fragment_add_transaction_pix"
-            tools:layout="@layout/fragment_add_transaction_pix" >
-            <action
-                android:id="@+id/action_addTransactionPixFragment_to_addTransactionSpendFragment"
-                app:destination="@id/addTransactionSpendFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/addTransactionSpendFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.AddTransactionSpendFragment"
-            android:label="fragment_add_transaction_spend"
-            tools:layout="@layout/fragment_add_transaction_spend" >
-            <action
-                android:id="@+id/action_addTransactionSpendFragment_to_addTransactionsCongratsFragment"
-                app:destination="@id/addTransactionCongratFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/addTransactionCongratFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.AddTransactionsCongratsFragment"
-            android:label="fragment_add_transaction_congrats"
-            tools:layout="@layout/fragment_add_transactions_congrats" />
-        <fragment
-            android:id="@+id/spendFragment"
-            android:name="bruno_brabosa.convidados.navigation_project.SpendFragment"
-            android:label="fragment_spend"
-            tools:layout="@layout/fragment_spend" />
-    </navigation>
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/topFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.SpendFragment"
+        android:label="fragment_spend"
+        tools:layout="@layout/fragment_top" >
+        <action
+            android:id="@+id/action_spendFragment_to_optionsFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/middleOneFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.ListTransactionsFragment"
+        android:label="fragment_list_transactions"
+        tools:layout="@layout/fragment_middle_one">
+        <action
+            android:id="@+id/action_listTransactionsFragment_to_itemTransactionFragment"
+            app:destination="@id/middleTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomFourFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.AddTransactionsCongratsFragment"
+        android:label="fragment_add_transaction_congrats"
+        tools:layout="@layout/fragment_add_bottom_four" >
+        <action
+            android:id="@+id/action_addTransactionCongratFragment_to_optionsFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/middleTwoFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.ItemTransactionFragment"
+        android:label="fragment_item_transaction"
+        tools:layout="@layout/fragment_middle_two" >
+        <action
+            android:id="@+id/action_itemTransactionFragment_to_optionsFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomOneFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.AddTransactionNameFragment"
+        android:label="fragment_add_transaction_name"
+        tools:layout="@layout/fragment_bottom_one">
+        <action
+            android:id="@+id/action_addTransactionNameFragment_to_addTransactionPixFragment"
+            app:destination="@id/bottomTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.OptionsFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_optionsFragment_to_listTransactionsFragment"
+            app:destination="@id/middleOneFragment" />
+        <action
+            android:id="@+id/action_optionsFragment_to_addTransactionNameFragment"
+            app:destination="@id/bottomOneFragment" />
+        <action
+            android:id="@+id/action_optionsFragment_to_spendFragment"
+            app:destination="@id/topFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomThreeFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.AddTransactionSpendFragment"
+        android:label="fragment_add_transaction_spend"
+        tools:layout="@layout/fragment_add_bottom_three">
+        <action
+            android:id="@+id/action_addTransactionSpendFragment_to_addTransactionsCongratsFragment"
+            app:destination="@id/bottomFourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomTwoFragment"
+        android:name="bruno_brabosa.convidados.navigation_project.AddTransactionPixFragment"
+        android:label="fragment_add_transaction_pix"
+        tools:layout="@layout/fragment_add_bottom_two">
+        <action
+            android:id="@+id/action_addTransactionPixFragment_to_addTransactionSpendFragment"
+            app:destination="@id/bottomThreeFragment" />
+    </fragment>
 </navigation>
