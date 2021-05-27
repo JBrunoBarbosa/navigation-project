@@ -12,7 +12,7 @@
         layout="@layout/layout_main_bar" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/btn_above"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginTop="20dp"
@@ -33,7 +33,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewTwo"
+        android:id="@+id/btn_bottom"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:backgroundTint="@color/primary_color"
@@ -42,7 +42,7 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewThree"
+        app:layout_constraintTop_toBottomOf="@+id/btn_middle"
         tools:targetApi="lollipop">
 
         <TextView
@@ -53,7 +53,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewThree"
+        android:id="@+id/btn_middle"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:backgroundTint="@color/primary_color"
@@ -62,7 +62,7 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_above"
         tools:targetApi="lollipop">
 
         <TextView
@@ -79,7 +79,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_bottom" />
 
 
     <androidx.constraintlayout.widget.Guideline
