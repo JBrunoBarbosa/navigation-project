@@ -2,6 +2,7 @@ package bruno_brabosa.convidados.navigation_project.ui.view
 
 import bruno_brabosa.convidados.navigation_project.R
 import bruno_brabosa.convidados.navigation_project.databinding.FragmentMiddleTwoBinding
+import bruno_brabosa.convidados.navigation_project.extension.onClickNavigate
 
 class MiddleTwoFragment : BaseFragment<FragmentMiddleTwoBinding>() {
 
