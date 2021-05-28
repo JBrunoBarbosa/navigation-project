@@ -1,4 +1,4 @@
-package bruno_brabosa.convidados.navigation_project
+package bruno_brabosa.convidados.navigation_project.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater

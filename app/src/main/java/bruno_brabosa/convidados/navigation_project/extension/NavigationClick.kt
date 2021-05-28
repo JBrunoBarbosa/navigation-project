@@ -1,4 +1,4 @@
-package bruno_brabosa.convidados.navigation_project
+package bruno_brabosa.convidados.navigation_project.extension
 
 import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
