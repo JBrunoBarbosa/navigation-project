@@ -16,7 +16,7 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = getViewBinding()
+        binding = setViewBinding()
         setUpClicksListeners()
         setUpClickNext()
         setUpClickBack()
@@ -24,7 +24,7 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
         return binding.root
     }
 
-    abstract fun getViewBinding(): T
+    abstract fun setViewBinding(): T
     open fun setUpClicksListeners() {}
     open fun setUpClickNext() {}
     open fun setUpClickBack() {}

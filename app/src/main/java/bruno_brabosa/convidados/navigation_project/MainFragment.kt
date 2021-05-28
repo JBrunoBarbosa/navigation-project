@@ -4,7 +4,7 @@ import bruno_brabosa.convidados.navigation_project.databinding.FragmentMainBindi
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
 
-    override fun getViewBinding() = FragmentMainBinding.inflate(layoutInflater)
+    override fun setViewBinding() = FragmentMainBinding.inflate(layoutInflater)
 
     override fun setUpClicksListeners() {
         binding.apply {
