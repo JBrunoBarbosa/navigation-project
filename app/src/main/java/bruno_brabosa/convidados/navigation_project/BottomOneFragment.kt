@@ -5,12 +5,35 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import bruno_brabosa.convidados.navigation_project.databinding.FragmentBottomOneBinding
 
 class BottomOneFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_bottom_one, container, false)
+
+    private lateinit var binding: FragmentBottomOneBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View {
+        setUpViewBinding()
+        setUpClicksListeners()
+
+        return binding.root
+    }
+
+    private fun setUpViewBinding() {
+        binding = FragmentBottomOneBinding.inflate(layoutInflater)
+    }
+
+    private fun setUpClicksListeners() {
+        binding.apply {
+
+            btnNext.setOnClickListener {
+                view?.let { view -> Navigation.findNavController(view).navigate(R.id.bottomTwoFragment) }
+            }
+
+            btnBack.setOnClickListener {
+                activity?.onBackPressed()
+            }
+        }
     }
 }
