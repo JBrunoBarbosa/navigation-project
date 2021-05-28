@@ -12,7 +12,7 @@
         layout="@layout/layout_main_bar" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/btn_next"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginTop="20dp"
@@ -33,7 +33,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewThree"
+        android:id="@+id/btn_back"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:backgroundTint="@color/primary_color"
@@ -42,7 +42,7 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_next"
         tools:targetApi="lollipop">
 
         <TextView
@@ -59,7 +59,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewThree" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -74,5 +74,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
