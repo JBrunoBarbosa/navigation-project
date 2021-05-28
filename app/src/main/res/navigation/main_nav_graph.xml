@@ -11,7 +11,11 @@
         tools:layout="@layout/fragment_top">
         <action
             android:id="@+id/navigate_to_main"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_nav_graph"
+            app:popUpToInclusive="true"
+            />
     </fragment>
     <fragment
         android:id="@+id/middleOneFragment"
@@ -21,9 +25,6 @@
         <action
             android:id="@+id/navigate_to_middle_two"
             app:destination="@id/middleTwoFragment" />
-        <action
-            android:id="@+id/navigate_to_main"
-            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/bottomFourFragment"
@@ -32,7 +33,10 @@
         tools:layout="@layout/fragment_add_bottom_four">
         <action
             android:id="@+id/navigate_to_main"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/middleTwoFragment"
@@ -41,10 +45,10 @@
         tools:layout="@layout/fragment_middle_two">
         <action
             android:id="@+id/navigate_to_main"
-            app:destination="@id/mainFragment" />
-        <action
-            android:id="@+id/navigate_to_middle_one"
-            app:destination="@id/middleOneFragment" />
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/bottomOneFragment"
