@@ -26,7 +26,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 <h1 align= 'center'>
 
 <img src = "https://imgur.com/YQggL2R.png">
-<img src = "hhttps://imgur.com/X4Gnfa5.png">
+<img src = "https://imgur.com/X4Gnfa5.png">
 
 </h1>
 
