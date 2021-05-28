@@ -18,17 +18,14 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
 
         binding = getViewBinding()
         setUpClicksListeners()
+        setUpClickNext()
+        setUpClickBack()
 
         return binding.root
     }
 
     abstract fun getViewBinding(): T
-
-    open fun setUpClicksListeners() {
-        setUpClickNext()
-        setUpClickBack()
-    }
-
+    open fun setUpClicksListeners() {}
     open fun setUpClickNext() {}
     open fun setUpClickBack() {}
 }
