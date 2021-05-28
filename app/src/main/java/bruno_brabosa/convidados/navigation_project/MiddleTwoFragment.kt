@@ -32,7 +32,7 @@ class MiddleTwoFragment : Fragment() {
             }
 
             btnBack.setOnClickListener {
-                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_middle_one) }
+                activity?.onBackPressed()
             }
         }
     }

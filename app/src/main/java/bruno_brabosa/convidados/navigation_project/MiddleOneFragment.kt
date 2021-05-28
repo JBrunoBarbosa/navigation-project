@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import bruno_brabosa.convidados.navigation_project.databinding.FragmentMiddleOneBinding
 import bruno_brabosa.convidados.navigation_project.databinding.FragmentTopBinding
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MiddleOneFragment : Fragment() {
     private lateinit var binding: FragmentMiddleOneBinding
@@ -32,7 +34,7 @@ class MiddleOneFragment : Fragment() {
             }
 
             btnBack.setOnClickListener {
-                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_main) }
+                activity?.onBackPressed()
             }
         }
     }

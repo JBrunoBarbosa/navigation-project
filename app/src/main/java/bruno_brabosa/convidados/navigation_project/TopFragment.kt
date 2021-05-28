@@ -30,9 +30,8 @@ class TopFragment : Fragment() {
             btnNext.setOnClickListener {
                 view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_main) }
             }
-
             btnBack.setOnClickListener {
-                view?.let { view -> Navigation.findNavController(view).navigate(R.id.navigate_to_main) }
+                activity?.onBackPressed()
             }
         }
     }
