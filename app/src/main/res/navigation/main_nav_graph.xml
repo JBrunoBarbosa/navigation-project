@@ -30,7 +30,7 @@
         android:id="@+id/bottomFourFragment"
         android:name="bruno_brabosa.convidados.navigation_project.ui.view.BottomFourFragment"
         android:label="fragment_bottom_four"
-        tools:layout="@layout/fragment_add_bottom_four">
+        tools:layout="@layout/fragment_bottom_four">
         <action
             android:id="@+id/navigate_to_main"
             app:destination="@id/mainFragment"
@@ -78,7 +78,7 @@
         android:id="@+id/bottomThreeFragment"
         android:name="bruno_brabosa.convidados.navigation_project.ui.view.BottomThreeFragment"
         android:label="fragment_bottom_three"
-        tools:layout="@layout/fragment_add_bottom_three">
+        tools:layout="@layout/fragment_bottom_three">
         <action
             android:id="@+id/navigate_to_bottom_four"
             app:destination="@id/bottomFourFragment" />
@@ -87,7 +87,7 @@
         android:id="@+id/bottomTwoFragment"
         android:name="bruno_brabosa.convidados.navigation_project.ui.view.BottomTwoFragment"
         android:label="fragment_bottom_two"
-        tools:layout="@layout/fragment_add_bottom_two">
+        tools:layout="@layout/fragment_bottom_two">
         <action
             android:id="@+id/navigate_to_bottom_three"
             app:destination="@id/bottomThreeFragment" />
